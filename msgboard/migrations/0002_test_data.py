@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
             ('Test User1', 'A simple test message'),
             ('Test User2', 'Another simple test message'),
         ]
- 
+
         with transaction.atomic():
             for author, text in test_data:
                 Message(author=author, text=text).save()
